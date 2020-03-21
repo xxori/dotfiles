@@ -1,0 +1,20 @@
+{
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.jediEnabled": false,
+    "sync.autoUpload": true,
+    "sync.forceUpload": false,
+    "sync.autoDownload": true,
+    "sync.gist": "d4ae763ec7f55cba4d17fa15bfe08bf1",
+    "cSpell.allowCompoundWords": true,
+    "go.autocompleteUnimportedPackages": true,
+    "workbench.colorTheme": "Night Owl",
+    "liveServer.settings.donotVerifyTags": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "workbench.iconTheme": "eq-material-theme-icons-ocean",
+    "kite.showWelcomeNotificationOnStartup": false,
+    "code-runner.runInTerminal": true,
+    "kite.showGoBetaNotification": false,
+    "explorer.confirmDelete": false,
+    "workbench.preferredDarkColorTheme": "Night Owl"
+}
