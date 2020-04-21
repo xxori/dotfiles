@@ -13,8 +13,9 @@
     "liveServer.settings.donotShowInfoMsg": true,
     "workbench.iconTheme": "eq-material-theme-icons-ocean",
     "kite.showWelcomeNotificationOnStartup": false,
-    "code-runner.runInTerminal": true,
     "kite.showGoBetaNotification": false,
     "explorer.confirmDelete": false,
-    "workbench.preferredDarkColorTheme": "Night Owl"
+    "workbench.preferredDarkColorTheme": "Night Owl",
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.runInTerminal": true
 }

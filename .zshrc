@@ -3,8 +3,10 @@ fpath+=("$HOME/.zsh/pure")
 autoload -U promptinit
 promptinit
 
-PURE_PROMPT_SYMBOL=">"
-
+#PURE_PROMPT_SYMBOL=">"
+#PURE_PROMPT_VICMD_SYMBOL="<"
+#PURE_GIT_DOWN_ARROW="v"
+#PURE_GIT_UP_ARROW="^"
 prompt pure
 
 alias ls="ls -h -a --color=auto"

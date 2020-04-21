@@ -28,10 +28,12 @@ bindsym $mod+p exec i3lock -u -e -p win -i /usr/share/backgrounds/background3.pn
 bindsym $mod+y exec i3lock -u -e -p win -i /usr/share/backgrounds/background3.png && systemctl suspend
 bindsym $mod+t exec i3lock -u -e -p win -i /usr/share/backgrounds/background3.png && systemctl hibernate
 
+# Feh background
+exec --no-startup-id feh --bg-scale /usr/share/backgrounds/background2.png 
 
 # Adjusting brightness
-bindsym $mod+j exec --no-startup-id xbacklight -inc -10
-bindsym $mod+k exec --no-startup-id xbacklight -inc +10
+#bindsym $mod+j exec --no-startup-id xbacklight -inc -10
+#bindsym $mod+k exec --no-startup-id xbacklight -inc +10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
