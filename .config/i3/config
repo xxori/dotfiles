@@ -29,7 +29,7 @@ bindsym $mod+y exec i3lock -u -e -p win -i /usr/share/backgrounds/background3.pn
 bindsym $mod+t exec i3lock -u -e -p win -i /usr/share/backgrounds/background3.png && systemctl hibernate
 
 # Feh background
-exec --no-startup-id feh --bg-scale /usr/share/backgrounds/background2.png 
+exec --no-startup-id feh --bg-scale /usr/share/backgrounds/background3.png 
 
 # Adjusting brightness
 #bindsym $mod+j exec --no-startup-id xbacklight -inc -10
@@ -63,10 +63,12 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+q kill
+
+#bindsym $mod+d exec --no-startup-id qdbus org.kde.krunner /App display
 
 # start rofi (a program launcher)
 bindsym $mod+d exec rofi -modi drun -show drun -location 7 -xoffset 14 -yoffset -52 -line-padding 4 -columns 1 -width 20 -lines 10 -padding 25 -hide-scrollbar -show-icons -drun-icon-theme
@@ -206,5 +208,19 @@ exec i3 gaps inner all set 20
 bindsym $mod+Shift+period exec i3 gaps inner current set 20
 bindsym $mod+Shift+comma exec i3 gaps inner current set 0
 
-# Starting compton for terminal transparency
-exec --no-startup-id compton
+bar {
+    status_command    $HOME/.config/i3/conkyscript
+    position          top
+    workspace_buttons yes
+    tray_output       none
+
+    colors {
+        background #002b36
+        statusline #ffffff
+
+        focused_workspace  #ffffff #285577
+        active_workspace   #ffffff #333333
+        inactive_workspace #888888 #222222
+        urgent_workspace   #ffffff #900000
+    }
+}
