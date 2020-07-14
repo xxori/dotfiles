@@ -1,0 +1,6 @@
+#!/bin/bash --norc
+
+if [ "$(pamixer --get-mute)" == "true" ]
+then
+  echo "Muted"
+fi

@@ -19,9 +19,9 @@ font pango:monospace 8
 for_window [class=".*"] border pixel 0
 
 # Binding multimedia keys to volume
-bindsym $mod+u exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym $mod+i exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym $mod+o exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym $mod+i exec amixer -q set Master 5%+ unmute
+bindsym $mod+u exec amixer -q set Master 5%- unmute
+bindsym $mod+o exec amixer -q set Master toggle
 
 # Binding lock
 bindsym $mod+p exec i3lock -u -e -p win -i /usr/share/backgrounds/background3.png
@@ -33,7 +33,7 @@ exec --no-startup-id feh --bg-scale /usr/share/backgrounds/background3.png
 
 # Adjusting brightness
 bindsym $mod+n exec --no-startup-id xbacklight -inc -10
-bindsym $mod+m exec --no-startup-id xbacklight -inc +10
+xbindsym $mod+m exec --no-startup-id xbacklight -inc +10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -113,7 +113,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # executing thunar (file manager)
-bindsym $mod+Shift+f exec thunar
+bindsym $mod+Shift+f exec dolphin
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking

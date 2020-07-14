@@ -6,7 +6,7 @@ conky.config = {
     max_text_width = 0,
 
     -- Update interval in seconds
-    update_interval = 2.0,
+    update_interval = 1.0,
 
     -- This is the number of times Conky will update before quitting.
     -- Set to zero to run forever.
@@ -35,6 +35,7 @@ conky.config = {
 
 conky.text = [[
 [
+    { "full_text": "Volume ${exec pamixer --get-volume}% ${exec $HOME/.config/i3/volscript}", "color": "\#ffffff"},   
     { "full_text": "Wifi ${wireless_essid wlp108s0} ${wireless_bitrate wlp108s0} ${addr wlp108s0}", "color": "\#ffffff"},
     { "full_text": "Battery ${battery}", "color": "\#ffffff" },
     { "full_text": "CPU ${cpu}%", "color": "\#ffffff" },
